@@ -6,3 +6,8 @@
 html, body {
   font-family: $font-regular;
 }
+
+.layout-center {
+  max-width: 1025px;
+  margin: 0 auto;
+}

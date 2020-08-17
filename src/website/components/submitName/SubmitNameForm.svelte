@@ -1,3 +1,7 @@
+<script>
+import Button from "../Button";
+
+</script>
 <style type="text/scss">
 @import "styles/theme.scss";
 
@@ -31,11 +35,7 @@ p {
   font-size: 30px;
 }
 
-button {
-  background: none;
-  border: 3px solid $darkest-color;
-  font-size: 20px;
-  height: 54px;
+.btn-col {
   width: 210px;
 }
 </style>
@@ -47,8 +47,10 @@ button {
       Is there anyone else you would want us to add?
     </p>
 
-    <button>
-      Submit a Name
-    </button>
+    <div class="btn-col">
+      <Button dark big>
+        Submit a Name
+      </Button>
+    </div>
   </div>
 </section>

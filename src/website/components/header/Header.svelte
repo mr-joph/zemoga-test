@@ -17,10 +17,16 @@ header {
   height: 740px;
 }
 
-nav {
+.nav-wrapper {
   background-color: rgb(51,51,51); /* fallback */
   background: linear-gradient(0deg, transparentize($darkest-color, 1) 0%, transparentize($darkest-color, .2) 100%);
-  height: 100px;
+  width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
 }
 
 .closing-days {
@@ -46,24 +52,26 @@ nav {
 </style>
 
 <header class="row">
-  <nav class="row">
-    <div class="col-4">
-      <RuleOfThumb />
-    </div>
-    <ul class="col-7">
-      <li class="col-3">
-        <Link>Past Trials</Link>
-      </li>
-      <li class="col-3">
-        <Link>How It Works</Link>
-      <li class="col-3">
-        <Link>Login/Sign Up</Link>
-      </li>
-      <li class="col-3">
-        <Link>Search</Link>
-      </li>
-    </ul>
-  </nav>
+  <div class="nav-wrapper">
+    <nav class="row layout-center">
+      <div class="col-4">
+        <RuleOfThumb />
+      </div>
+      <ul class="col-7">
+        <li class="col-3">
+          <Link>Past Trials</Link>
+        </li>
+        <li class="col-3">
+          <Link>How It Works</Link>
+        <li class="col-3">
+          <Link>Login/Sign Up</Link>
+        </li>
+        <li class="col-3">
+          <Link>Search</Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
   <div class="row">card here</div>
 

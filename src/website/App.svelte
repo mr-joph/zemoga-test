@@ -3,6 +3,7 @@ import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import RulingCard from "components/rulingCard/RulingCard";
 import SubmitNameForm from "components/submitName/SubmitNameForm";
+import Message from "components/message/Message";
 
 let word = "begin";
 
@@ -13,6 +14,12 @@ let word = "begin";
 
 main {
   position: relative;
+}
+
+h3 {
+  font-family: $font-light;
+  font-size: 40px;
+  margin: 30px 0; 
 }
 
 .previous-rulings {
@@ -27,7 +34,8 @@ main {
   <Header />
 
   <main class="layout-center">
-    Testing our setup!! YAY!
+    <Message />
+    <h3>Previous Rulings</h3>
     <div class="previous-rulings">
       <RulingCard 
         personaData={{

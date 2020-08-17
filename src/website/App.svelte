@@ -1,4 +1,5 @@
 <script>
+import Header from "components/header/Header";
 
 let word = "begin";
 

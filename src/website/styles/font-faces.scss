@@ -1,0 +1,16 @@
+@import "./theme.scss";
+
+@font-face {
+  font-family: $font-regular;
+  src: url("./fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: $font-light;
+  src: url("./fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: $font-bold;
+  src: url("./fonts/Lato-Bold.ttf");
+}

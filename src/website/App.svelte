@@ -1,6 +1,8 @@
 <script>
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
+import SubmitNameForm from "components/submitName/SubmitNameForm";
+
 let word = "begin";
 
 </script>
@@ -21,6 +23,7 @@ main {
 
   <main>
     Testing our setup!! YAY!
+    <SubmitNameForm />
     <Footer />
   </main>
 

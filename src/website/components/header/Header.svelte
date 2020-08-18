@@ -10,7 +10,7 @@ import VoteCard from './VoteCard';
 
 header {
   align-items: center;
-  background-image: url("./assets/pope.jpg");
+  background-image: url("assets/pope.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;

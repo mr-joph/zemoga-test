@@ -15,6 +15,7 @@
 @import "styles/theme.scss";
 
 figure {
+  background: linear-gradient(180deg, transparentize($darkest-color, 1) 30%, transparentize($darkest-color, .2) 100%);
   display: flex;
   flex-direction: column;
   height: 550px;
@@ -36,7 +37,6 @@ figure {
   }
 
 }
-
 
 section.persona-content {
   display: flex;
@@ -109,7 +109,7 @@ section.persona-content {
 </style>
 
 <figure class="ruling-card">
-  <img src="../../assets/cristina.jpg" alt="Photo here"/>
+  <img src={`assets/${personaData.picture}`} alt="Photo here"/>
   <figcaption>
       <aside class="like-winning">
         <span class="square" class:approve={true}></span>

@@ -50,7 +50,7 @@ h3 {
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
           careerField: "Politics",
-          picture: ""
+          picture: "kanye.jpg"
         }}
       />
 
@@ -60,7 +60,7 @@ h3 {
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
           careerField: "Politics",
-          picture: ""
+          picture: "mark.jpg"
         }}
       />
 
@@ -70,7 +70,7 @@ h3 {
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
           careerField: "Politics",
-          picture: ""
+          picture: "cristina.jpg"
         }}
       />
 
@@ -80,7 +80,7 @@ h3 {
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
           careerField: "Politics",
-          picture: ""
+          picture: "malala.jpg"
         }}
       />
     </div>

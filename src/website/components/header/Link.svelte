@@ -17,8 +17,6 @@ a {
 
 </style>
 
-<div>
-  <a href="#">
-    <slot></slot>
-  </a>
-</div>
+<a href="#">
+  <slot></slot>
+</a>

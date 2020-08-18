@@ -1,6 +1,8 @@
 <script>
 import RuleOfThumb from "./RuleOFThumbLogo";
 import Link from "./Link";
+import VoteCard from './VoteCard';
+
 </script>
 
 <style type="text/scss">
@@ -22,11 +24,31 @@ header {
   background: linear-gradient(0deg, transparentize($darkest-color, 1) 0%, transparentize($darkest-color, .2) 100%);
   width: 100%;
 
+  .logo {
+    margin-top: 30px;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
     height: 100px;
   }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+
+    li {
+      margin: 0 20px;
+      padding: 7px 3px;
+    }
+  }
+}
+
+.vote-wrapper {
+  margin-top: 20px;
+  width: 100%;
 }
 
 .closing-days {
@@ -35,48 +57,76 @@ header {
   margin-top: auto;
   width: 100%;
 
+  & > div {
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+  }
+
   & > div:first-child {
     background-color: transparentize($mid-gray-color, .7); /* fallback */
     background: linear-gradient(270deg, transparentize($mid-gray-color, .7) 0%, transparentize($mid-gray-color, 1) 140%);
     color: $lightest-color;
     font-size: 13px;
+    justify-content: flex-end;
+    text-align: right;
+    text-transform: uppercase;
     width: 40%;
   }
 
   & > div:nth-child(2) {
     background-color: transparentize($lightest-color, .3);
     color: $dark-graycolor;
+    font-size: 36px;
+    justify-content: flex-start;
+    text-align: left;
     width: 60%;
+    
+    span {
+      display: inline-block;
+      font-family: $font-light;
+      margin-left: 7px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    background-size: auto;
   }
 }
 </style>
 
-<header class="row">
+<header class="">
   <div class="nav-wrapper">
-    <nav class="row layout-center">
-      <div class="col-4">
+    <nav class="layout-center">
+      <div class="logo">
         <RuleOfThumb />
       </div>
-      <ul class="col-7">
-        <li class="col-3">
+      <ul class="nav-links">
+        <li>
           <Link>Past Trials</Link>
         </li>
-        <li class="col-3">
+        <li >
           <Link>How It Works</Link>
-        <li class="col-3">
+        <li>
           <Link>Login/Sign Up</Link>
         </li>
-        <li class="col-3">
+        <li>
           <Link>Search</Link>
         </li>
       </ul>
     </nav>
   </div>
 
-  <div class="row">card here</div>
+  <div class="vote-wrapper">
+    <div class="layout-center">
+      <VoteCard />
+    </div>
+  </div>
 
   <div class="closing-days">
-    <div>Closing</div>
-    <div>22 days</div>
+    <div>Closing In</div>
+    <div>22 <span>days</span></div>
   </div>
 </header>

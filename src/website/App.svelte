@@ -40,7 +40,6 @@ h3 {
 
 <div>
   <Header />
-
   <main class="layout-center">
     <Message />
     <h3>Previous Rulings</h3>

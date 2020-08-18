@@ -2,12 +2,14 @@
 @import "styles/theme.scss";
 
 .message {
+  align-items: center;
   background-color: $light-gray-color;
   border-radius: 2px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 40px;
-  padding: 20px 15px;
+  padding: 20px 0;
   width: 100%;
 }
 

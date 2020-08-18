@@ -44,6 +44,21 @@ footer {
   }
 }
 
+@media only screen and (max-width: $phone) {
+  footer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  ul {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 </style>
 
 <footer>

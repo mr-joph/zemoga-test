@@ -28,7 +28,12 @@ h3 {
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: $laptop) {
+  h3 {
+    margin: 30px auto 15px auto;
+    width: 492px;
+  }
+
   .previous-rulings {
     flex-direction: column;
     justify-content: center;

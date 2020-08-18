@@ -49,6 +49,13 @@ import Icon from "../icons/Icon";
   margin-left: 15px;
 }
 
+
+@media only screen and (max-width: $phone) {
+  .message {
+    margin-top: 0;
+  }
+}
+
 </style>
 
 <div class="message">

@@ -22,7 +22,6 @@ header {
 
 .nav-wrapper {
   background-color: rgb(51,51,51); /* fallback */
-  background: linear-gradient(0deg, transparentize($darkest-color, 1) 0%, transparentize($darkest-color, .2) 100%);
   width: 100%;
 
   .logo {
@@ -31,8 +30,7 @@ header {
 
   nav {
     display: flex;
-    justify-content: space-between;
-    height: 100px;
+
   }
 
   .nav-links {
@@ -95,11 +93,58 @@ header {
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: $laptop) {
   header {
     background-size: auto;
   }
+
 }
+
+@media only screen and (max-width: $phone) {
+  header {
+    height: 1200px;
+    background-position: top;
+  }
+
+  .nav-wrapper {
+    background: linear-gradient(0deg, transparentize($darkest-color, 1) 0%, transparentize($darkest-color, 0) 100%);
+  }
+
+  nav {
+    align-items: center;
+    flex-direction: column;
+    height: 130px;
+    justify-content: center;
+  }
+
+  .vote-wrapper {
+    margin-top: auto;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-self: flex-end;
+
+    div {
+      margin-top: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $phone) {
+  .nav-wrapper {
+    background: linear-gradient(0deg, transparentize($darkest-color, 1) 0%, transparentize($darkest-color, .2) 100%);
+  }
+
+  nav {
+    height: 100px;
+    justify-content: space-between;
+  }
+
+
+
+}
+
+
 </style>
 
 <header class="">

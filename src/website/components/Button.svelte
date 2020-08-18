@@ -14,6 +14,10 @@ button {
   font-size: 14px;
   height: 40px;
   width: 100%;
+
+  &:active {
+    transform: translate(0.5px, 0.5px);
+  }
 }
 
 .big {

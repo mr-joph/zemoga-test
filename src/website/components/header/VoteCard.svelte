@@ -93,6 +93,18 @@ h3.title {
   }
 }
 
+@media only screen and (max-width: $phone) {
+  .vote-card {
+    height: auto;
+    width: 100%;
+  }
+
+  .content {
+    backdrop-filter: blur(30px);
+    background-color: $darkest-color;
+  }
+}
+
 </style>
 
 <div class="vote-card">

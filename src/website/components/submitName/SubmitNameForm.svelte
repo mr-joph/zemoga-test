@@ -38,6 +38,24 @@ p {
 .btn-col {
   width: 210px;
 }
+
+@media only screen and (max-width: $phone) {
+  section {
+    height: auto;
+    .background {
+      background-size: cover;
+    }
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .btn-col {
+    margin: 10px auto;
+    width: 90%;
+  }
+}
 </style>
 
 <section>

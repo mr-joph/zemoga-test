@@ -4,9 +4,9 @@ import Icon from "../icons/Icon";
 export let likes = 0;
 export let unlikes = 0;
 
-let totalVotes = likes + unlikes;
-let likePercent = totalVotes != 0 ? parseInt(likes / (totalVotes * 0.01)) : 50;
-let unlikePercent = totalVotes != 0 ? parseInt(unlikes / (totalVotes * 0.01)) : 50;
+$: totalVotes = likes + unlikes;
+$: likePercent = totalVotes != 0 ? Math.round(likes / (totalVotes * 0.01)) : 50;
+$: unlikePercent = totalVotes != 0 ? Math.round(unlikes / (totalVotes * 0.01)) : 50;
 </script>
 
 <div class="like-bar">

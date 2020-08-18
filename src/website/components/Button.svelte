@@ -38,7 +38,7 @@ button {
 
 </style>
 
-<button class:big class:light class:dark={dark && !light}>
+<button class:big class:light class:dark={dark && !light} on:click>
   <slot></slot>
 </button>
 

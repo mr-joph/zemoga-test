@@ -1,18 +1,36 @@
 <script>
-  import LikeBar from "./LikeBar";
-  import Vote from "./Vote";
-  import Button from "../Button";
-  import Icon from "../icons/Icon";
+import {
+  VOTE_EVENT_LIKE,
+  VOTE_EVENT_UNLIKE
+} from "./constants";
+import LikeBar from "./LikeBar";
+import Vote from "./Vote";
+import Button from "../Button";
+import Icon from "../icons/Icon";
 
-  export let personaData = {
-    name: "",
-    description: "",
-    careerField: "",
-    duration: "",
-    picture: "",
-    likes: 0,
-    unlikes: 0,
-  };
+export let personaData = {
+  name: "",
+  description: "",
+  careerField: "",
+  duration: "",
+  picture: "",
+  likes: 0,
+  unlikes: 0,
+};
+
+function updateVotes({ detail }) {
+
+  switch(detail.type) {
+    case VOTE_EVENT_LIKE:
+      personaData.likes = detail.value;
+      break;
+    case VOTE_EVENT_UNLIKE:
+      personaData.unlikes = detail.value;
+      break;
+  }
+
+  console.log(detail, personaData);
+}
 
 </script>
 
@@ -31,7 +49,11 @@
         <footer>
           <div class="btn-col">
             <!-- <Button light>View Full Report</Button> -->
-            <Vote />
+            <Vote
+              id={personaData.name}
+              likes={personaData.likes}
+              unlikes={personaData.unlikes}
+              on:updateVotes={updateVotes}/>
           </div> 
           <div class="career-duration">
             <div>{personaData.duration}</div>

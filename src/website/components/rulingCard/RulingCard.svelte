@@ -7,11 +7,38 @@
     name: "",
     description: "",
     careerField: "",
-    careerDuration: "",
+    duration: "",
     picture: ""
   }
 
 </script>
+
+<figure class="ruling-card">
+  <img src={`${personaData.picture}`} alt="Photo here"/>
+  <figcaption>
+      <aside class="like-winning">
+        <span class="square" class:approve={true}>
+          <Icon type="like" small/>
+        </span>
+      </aside>
+
+      <section class="persona-content">
+        <h4>{personaData.name}</h4>
+        <p>{personaData.description}</p>
+        <footer>
+          <div class="btn-col">
+            <Button light>View Full Report</Button>
+          </div> 
+          <div class="career-duration">
+            <div>{personaData.duration}</div>
+            <div>in {personaData.careerField}</div>
+          </div>
+        </footer>
+      </section>
+
+  </figcaption>
+  <LikeBar />
+</figure>
 
 <style type="text/scss">
 @import "styles/theme.scss";
@@ -112,30 +139,3 @@ section.persona-content {
 }
 
 </style>
-
-<figure class="ruling-card">
-  <img src={`assets/${personaData.picture}`} alt="Photo here"/>
-  <figcaption>
-      <aside class="like-winning">
-        <span class="square" class:approve={true}>
-          <Icon type="like" small/>
-        </span>
-      </aside>
-
-      <section class="persona-content">
-        <h4>{personaData.name}</h4>
-        <p>{personaData.description}</p>
-        <footer>
-          <div class="btn-col">
-            <Button light>View Full Report</Button>
-          </div> 
-          <div class="career-duration">
-            <div>{personaData.careerDuration}</div>
-            <div>in {personaData.careerField}</div>
-          </div>
-        </footer>
-      </section>
-
-  </figcaption>
-  <LikeBar />
-</figure>

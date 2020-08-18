@@ -6,6 +6,40 @@ import Icon from "../icons/Icon";
 
 </script>
 
+<header class="">
+  <div class="nav-wrapper">
+    <nav class="layout-center">
+      <div class="logo">
+        <RuleOfThumb />
+      </div>
+      <ul class="nav-links">
+        <li>
+          <Link path="/past-trials">Past Trials</Link>
+        </li>
+        <li>
+          <Link path="/how-it-works">How It Works</Link>
+        <li>
+          <Link path="/login">Login/Sign Up</Link>
+        </li>
+        <li class="search-button">
+          <Link><Icon type="search" big /></Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="vote-wrapper">
+    <div class="layout-center">
+      <VoteCard />
+    </div>
+  </div>
+
+  <div class="closing-days">
+    <div>Closing In</div>
+    <div>22 <span>days</span></div>
+  </div>
+</header>
+
 <style type="text/scss">
 @import "styles/theme.scss";
 
@@ -146,37 +180,3 @@ header {
 
 
 </style>
-
-<header class="">
-  <div class="nav-wrapper">
-    <nav class="layout-center">
-      <div class="logo">
-        <RuleOfThumb />
-      </div>
-      <ul class="nav-links">
-        <li>
-          <Link path="/past-trials">Past Trials</Link>
-        </li>
-        <li>
-          <Link path="/how-it-works">How It Works</Link>
-        <li>
-          <Link path="/login">Login/Sign Up</Link>
-        </li>
-        <li class="search-button">
-          <Link><Icon type="search" big /></Link>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="vote-wrapper">
-    <div class="layout-center">
-      <VoteCard />
-    </div>
-  </div>
-
-  <div class="closing-days">
-    <div>Closing In</div>
-    <div>22 <span>days</span></div>
-  </div>
-</header>

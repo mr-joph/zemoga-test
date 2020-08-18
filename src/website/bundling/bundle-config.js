@@ -26,7 +26,6 @@ module.exports = {
         path: config.STATIC_FOLDER,
         filename: "bundle.js"
     },
-    target: 'web',
     resolve: {
         alias: {
             svelte: path.resolve("node_modules", "svelte"),
@@ -34,7 +33,7 @@ module.exports = {
             components: path.resolve(__dirname, "../components"),
             assets: path.resolve(__dirname, "../assets")
         },
-        extensions: [".js", ".svelte"]
+        extensions: [".mjs", ".js", ".svelte"]
     },
     module: {
         rules: [
@@ -45,6 +44,7 @@ module.exports = {
                     loader: "svelte-loader",
                     options: {
                         emitCss: true,
+                        hydratable: true,
                         preprocess: require("svelte-preprocess")({
                             scss: {
                                 importer: [
@@ -91,7 +91,8 @@ module.exports = {
             filename: "styles.css"
         }),
         new CopyPlugin([
-            { from: path.resolve(__dirname, "../assets"), to: `${config.STATIC_FOLDER}/assets` }
+            { from: path.resolve(__dirname, "../assets"), to: `${config.STATIC_FOLDER}/assets` },
+            { from: path.resolve(__dirname, "../../mock-data"), to: `${config.STATIC_FOLDER}/mock-data` }   
         ])
     ]
 };

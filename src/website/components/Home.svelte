@@ -1,11 +1,55 @@
-<script>
+<script type="text/javascript">
+import { onMount } from "svelte";
+
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import RulingCard from "components/rulingCard/RulingCard";
 import SubmitNameForm from "components/submitName/SubmitNameForm";
 import Message from "components/message/Message";
 
+let rulings = [];
+
+onMount(async () => {
+  try {
+    const response = await fetch("/mock-data/previous-rulings.json");
+    const payload = await response.json();
+
+    rulings = payload;
+  } catch(error) {
+    console.error("Error: ", error);
+  }
+});
+
+
 </script>
+
+<div>
+  <Header />
+  <main class="layout-center">
+    <Message />
+    <h3>Previous Rulings</h3>
+    <div class="previous-rulings">
+
+      {#each rulings as celebrity}
+        <RulingCard 
+          personaData={{
+            name: celebrity.name,
+            description: celebrity.description,
+            duration: celebrity.duration,
+            careerField: celebrity.careerField,
+            picture: celebrity.picture
+          }}
+        />
+      {:else}
+        <p>Loading...</p>
+      {/each}
+
+    </div>
+    <SubmitNameForm />
+    <Footer />
+  </main>
+
+</div>
 
 <style type="text/scss">
 @import "styles/theme.scss";
@@ -42,55 +86,3 @@ h3 {
 }
 
 </style>
-
-<div>
-  <Header />
-  <main class="layout-center">
-    <Message />
-    <h3>Previous Rulings</h3>
-    <div class="previous-rulings">
-      <RulingCard 
-        personaData={{
-          name: "Kanye West",
-          description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-          careerDuration: "1 month ago",
-          careerField: "Entertainment",
-          picture: "kanye.jpg"
-        }}
-      />
-
-            <RulingCard 
-        personaData={{
-          name: "Mark Zuckerberg",
-          description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-          careerDuration: "1 month ago",
-          careerField: "Business",
-          picture: "mark.jpg"
-        }}
-      />
-
-            <RulingCard 
-        personaData={{
-          name: "Cristina Fernández de Kirchner",
-          description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-          careerDuration: "1 month ago",
-          careerField: "Politics",
-          picture: "cristina.jpg"
-        }}
-      />
-
-            <RulingCard 
-        personaData={{
-          name: "Malala Yousafzai",
-          description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-          careerDuration: "1 month ago",
-          careerField: "Entertainment",
-          picture: "malala.jpg"
-        }}
-      />
-    </div>
-    <SubmitNameForm />
-    <Footer />
-  </main>
-
-</div>

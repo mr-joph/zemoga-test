@@ -10,7 +10,7 @@ import Message from "components/message/Message";
 let rulings = [];
 
 onMount(async () => {
-  const DATA_URL = "/mock-data/previous-rulings.json";
+  const DATA_URL = "/previous-rulings";
   
   try {
     const persistenceData = localStorage.getItem(DATA_URL);

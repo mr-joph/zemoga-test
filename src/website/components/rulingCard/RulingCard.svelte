@@ -18,7 +18,7 @@ export let personaData = {
   unlikes: 0,
 };
 
-const DATA_PERSISTENCE_ID = "/mock-data/previous-rulings.json";
+const DATA_PERSISTENCE_ID = "/previous-rulings";
 
 function updateVotes({ detail }) {
 

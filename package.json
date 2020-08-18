@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "node ./src/main.js",
-    "start:static": "node ./src/main.js & npm run static-server",
+    "start:static": "npm run build - --watch & npm un static-server",
     "static-server": "http-server public/",
-    "generate": "webpack --config src/website/bundling/bundle-config.js",
+    "build": "webpack --config src/website/bundling/bundle-config.js",
     "clear-static": "rm -rf public/*"
   },
   "author": "Joseph D Hernandez",

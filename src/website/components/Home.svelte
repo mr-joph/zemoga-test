@@ -10,9 +10,20 @@ import Message from "components/message/Message";
 let rulings = [];
 
 onMount(async () => {
+  const DATA_URL = "/mock-data/previous-rulings.json";
+  
   try {
-    const response = await fetch("/mock-data/previous-rulings.json");
-    const payload = await response.json();
+    const persistenceData = localStorage.getItem(DATA_URL);
+    let payload;
+
+    if(persistenceData) {
+      payload = JSON.parse(persistenceData);
+    } else {
+      const response = await fetch(DATA_URL);
+      payload = await response.json();
+
+      localStorage.setItem(DATA_URL, JSON.stringify(payload));
+    }
 
     rulings = payload;
   } catch(error) {

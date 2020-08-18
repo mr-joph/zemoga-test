@@ -18,6 +18,8 @@ export let personaData = {
   unlikes: 0,
 };
 
+const DATA_PERSISTENCE_ID = "/mock-data/previous-rulings.json";
+
 function updateVotes({ detail }) {
 
   switch(detail.type) {
@@ -29,7 +31,14 @@ function updateVotes({ detail }) {
       break;
   }
 
-  console.log(detail, personaData);
+  const persistenceData = JSON.parse(localStorage.getItem(DATA_PERSISTENCE_ID)) || [];
+  const indexData = persistenceData.findIndex(item => item.name === personaData.name);
+
+  if(indexData != -1) {
+    persistenceData[indexData] = personaData;
+    localStorage.setItem(DATA_PERSISTENCE_ID, JSON.stringify(persistenceData));
+  }
+
 }
 
 </script>

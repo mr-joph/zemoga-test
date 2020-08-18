@@ -1,4 +1,5 @@
 <script>
+  export let path = "";
 </script>
 
 <style type="text/scss">
@@ -17,6 +18,6 @@ a {
 
 </style>
 
-<a href="#">
+<a href={path}>
   <slot></slot>
 </a>

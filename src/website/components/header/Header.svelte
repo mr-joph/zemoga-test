@@ -11,7 +11,7 @@ import Icon from "../icons/Icon";
 
 header {
   align-items: center;
-  background-image: url("assets/pope.jpg");
+  background-image: url("/assets/pope.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -110,12 +110,12 @@ header {
       </div>
       <ul class="nav-links">
         <li>
-          <Link>Past Trials</Link>
+          <Link path="/past-trials">Past Trials</Link>
         </li>
-        <li >
-          <Link>How It Works</Link>
         <li>
-          <Link>Login/Sign Up</Link>
+          <Link path="/how-it-works">How It Works</Link>
+        <li>
+          <Link path="/login">Login/Sign Up</Link>
         </li>
         <li class="search-button">
           <Link><Icon type="search" big /></Link>

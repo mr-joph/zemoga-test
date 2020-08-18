@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node ./src/main.js",
-    "start:static": "npm run build - --watch & npm un static-server",
-    "static-server": "http-server public/",
+    "start:static": "npm run build & npm run static-server",
+    "static-server": "http-server public/ --port 1234",
     "build": "webpack --config src/website/bundling/bundle-config.js",
     "clear-static": "rm -rf public/*"
   },

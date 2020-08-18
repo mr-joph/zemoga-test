@@ -37,7 +37,9 @@ onMount(async () => {
             description: celebrity.description,
             duration: celebrity.duration,
             careerField: celebrity.careerField,
-            picture: celebrity.picture
+            picture: celebrity.picture,
+            likes: celebrity.likes,
+            unlikes: celebrity.unlikes,
           }}
         />
       {:else}

@@ -1,5 +1,6 @@
 <script>
   import LikeBar from "./LikeBar";
+  import Vote from "./Vote";
   import Button from "../Button";
   import Icon from "../icons/Icon";
 
@@ -8,8 +9,10 @@
     description: "",
     careerField: "",
     duration: "",
-    picture: ""
-  }
+    picture: "",
+    likes: 0,
+    unlikes: 0,
+  };
 
 </script>
 
@@ -27,7 +30,8 @@
         <p>{personaData.description}</p>
         <footer>
           <div class="btn-col">
-            <Button light>View Full Report</Button>
+            <!-- <Button light>View Full Report</Button> -->
+            <Vote />
           </div> 
           <div class="career-duration">
             <div>{personaData.duration}</div>
@@ -37,7 +41,7 @@
       </section>
 
   </figcaption>
-  <LikeBar />
+  <LikeBar likes={personaData.likes} unlikes={personaData.unlikes}/>
 </figure>
 
 <style type="text/scss">
@@ -94,7 +98,7 @@ section.persona-content {
     justify-content: space-between;
 
     .btn-col {
-      width: 156px;
+      width: 300px;
     }
 
     .career-duration {

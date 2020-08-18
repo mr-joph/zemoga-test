@@ -1,6 +1,8 @@
 <script>
   import LikeBar from "./LikeBar";
   import Button from "../Button";
+  import Icon from "../icons/Icon";
+
   export let personaData = {
     name: "",
     description: "",
@@ -92,9 +94,11 @@ section.persona-content {
   width: 31px;
 
   .square {
-    display: block;
+    align-items: center;
+    display: flex;
     height: 31px;
     margin-top: 54px;
+    justify-content: center;
     width: 31px;
     &.disapprove {
       background-color: $secondary-color;
@@ -112,7 +116,9 @@ section.persona-content {
   <img src={`assets/${personaData.picture}`} alt="Photo here"/>
   <figcaption>
       <aside class="like-winning">
-        <span class="square" class:approve={true}></span>
+        <span class="square" class:approve={true}>
+          <Icon type="like" small/>
+        </span>
       </aside>
 
       <section class="persona-content">

@@ -1,3 +1,7 @@
+<script>
+import Icon from "../icons/Icon";
+</script>
+
 <style type="text/scss">
 @import "styles/theme.scss";
 
@@ -41,6 +45,10 @@
   margin-left: 20px;  
 }
 
+.close-btn {
+  margin-left: 15px;
+}
+
 </style>
 
 <div class="message">
@@ -53,5 +61,7 @@
     Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report.
   </div>
 
-  <div>X</div>
+  <div class="close-btn">
+    <Icon type="close" big/>
+  </div>
 </div>

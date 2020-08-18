@@ -2,6 +2,7 @@
 import RuleOfThumb from "./RuleOFThumbLogo";
 import Link from "./Link";
 import VoteCard from './VoteCard';
+import Icon from "../icons/Icon";
 
 </script>
 
@@ -42,6 +43,10 @@ header {
     li {
       margin: 0 20px;
       padding: 7px 3px;
+
+      &.search-button {
+        margin-top: -5px;
+      }
     }
   }
 }
@@ -112,8 +117,8 @@ header {
         <li>
           <Link>Login/Sign Up</Link>
         </li>
-        <li>
-          <Link>Search</Link>
+        <li class="search-button">
+          <Link><Icon type="search" big /></Link>
         </li>
       </ul>
     </nav>

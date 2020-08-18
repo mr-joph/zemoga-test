@@ -1,4 +1,6 @@
 <script>
+import Icon from "../icons/Icon";
+
 </script>
 
 <style type="text/scss">
@@ -53,8 +55,8 @@ footer {
 
   <ul class="social">
     <li>Follow Up</li>
-    <li>Facebook icon</li>
-    <li>Twitter icon</li>
+    <li><Icon type="facebook" mid/></li>
+    <li><Icon type="twitter" mid/></li>
   </ul>
 
 </footer>

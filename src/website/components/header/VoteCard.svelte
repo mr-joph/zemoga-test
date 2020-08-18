@@ -1,3 +1,8 @@
+<script>
+import Icon from "../icons/Icon";
+
+</script>
+
 <style type="text/scss">
 @import "styles/theme.scss";
 
@@ -66,8 +71,11 @@ h3.title {
   width: 100%;
 
   div {
-    height: 82px;
+    align-items: center;
     cursor: pointer;
+    display: flex;
+    height: 82px;
+    justify-content: center;
     width: 50%;
 
     &.approve {
@@ -101,7 +109,7 @@ h3.title {
   </div>
 
   <div class="vote-thumbs">
-    <div class="approve"></div>
-    <div class="disapprove"></div>
+    <div class="approve"><Icon type="like" extra/></div>
+    <div class="disapprove"><Icon type="unlike" extra/></div>
   </div>
 </div>

@@ -14,35 +14,47 @@ footer {
   font-family: $font-light;
   font-size: 12px;
   justify-content: space-between;
+  margin-top: 50px;
+  padding: 20px 0 120px 0;
   position: relative;
   width: 100%;
 
   & > ul {
     display: flex;
+    li {
+      margin: 10px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 
-  & > div {
-    display: flex;
+  .interactive {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 </style>
 
 <footer>
-  <ul>
-    <li>Terms and Conditions</li>
-    <li>Privacy Policy</li>
-    <li>Contact Us</li>
+  <ul class="legal">
+    <li class="interactive">Terms and Conditions</li>
+    <li class="interactive">Privacy Policy</li>
+    <li class="interactive">Contact Us</li>
   </ul>
 
-  <div>
-    <span>
-      Follow Up
-    </span>
-    <ul>
-      <li>Facebook icon</li>
-      <li>Twitter icon</li>
-    </ul>
-  </div>
+  <ul class="social">
+    <li>Follow Up</li>
+    <li>Facebook icon</li>
+    <li>Twitter icon</li>
+  </ul>
 
 </footer>

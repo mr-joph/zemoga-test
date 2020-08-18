@@ -33,9 +33,10 @@ figure {
   }
 
   figcaption {
-    bottom: 70px;
+    align-items: flex-end;
     display: flex;
-    position: absolute;
+    flex-grow: 1;
+    padding-bottom: 30px;
   }
 
 }
@@ -91,13 +92,13 @@ section.persona-content {
 
 
 .like-winning {
+  height: 145px;
   width: 31px;
 
   .square {
     align-items: center;
     display: flex;
     height: 31px;
-    margin-top: 54px;
     justify-content: center;
     width: 31px;
     &.disapprove {

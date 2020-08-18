@@ -57,6 +57,11 @@ h3.title {
   
   span {
     text-decoration: underline;
+
+    &:first-of-type {
+      vertical-align: middle;
+    }
+
   }
 }
 
@@ -102,7 +107,9 @@ h3.title {
     </p>
 
     <p class="more-info">
-      <span>W</span> <span> More information</span>
+      <a href="https://en.wikipedia.org/wiki/Pope_Francis" target="_blank">
+        <span><Icon type="wikipedia" small /></span> <span> More information</span>
+      </a>
     </p>
 
     <p class="verdict">What’s Your Verdict?</p>

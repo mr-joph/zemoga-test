@@ -46,20 +46,20 @@ h3 {
     <div class="previous-rulings">
       <RulingCard 
         personaData={{
-          name: "Cristina Fernández de Kirchner",
+          name: "Kanye West",
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
-          careerField: "Politics",
+          careerField: "Entertainment",
           picture: "kanye.jpg"
         }}
       />
 
             <RulingCard 
         personaData={{
-          name: "Cristina Fernández de Kirchner",
+          name: "Mark Zuckerberg",
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
-          careerField: "Politics",
+          careerField: "Business",
           picture: "mark.jpg"
         }}
       />
@@ -76,10 +76,10 @@ h3 {
 
             <RulingCard 
         personaData={{
-          name: "Cristina Fernández de Kirchner",
+          name: "Malala Yousafzai",
           description: "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
           careerDuration: "1 month ago",
-          careerField: "Politics",
+          careerField: "Entertainment",
           picture: "malala.jpg"
         }}
       />

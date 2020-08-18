@@ -7,6 +7,9 @@ html, body {
   font-family: $font-regular;
 }
 
+a {
+  text-decoration: none;
+}
 .layout-center {
   max-width: 1025px;
   margin: 0 auto;

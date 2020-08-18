@@ -5,8 +5,6 @@ import RulingCard from "components/rulingCard/RulingCard";
 import SubmitNameForm from "components/submitName/SubmitNameForm";
 import Message from "components/message/Message";
 
-let word = "begin";
-
 </script>
 
 <style type="text/scss">
@@ -24,8 +22,18 @@ h3 {
 
 .previous-rulings {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .previous-rulings {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 </style>
